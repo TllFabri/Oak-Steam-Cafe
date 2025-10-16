@@ -1,27 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #2c1810;
+    background-color: #faf8f5;
 }
 
 header {
-    background-color: #2c1810;
+    background-color: rgba(44, 24, 16, 0.95);
+    backdrop-filter: blur(6px);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -34,9 +38,10 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #fff;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -48,6 +53,8 @@ header {
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -55,136 +62,142 @@ header {
 }
 
 .hero {
-    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.7)),
-    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200') 
-    center / cover;
-    height: 100vh;
+    background: linear-gradient(rgba(44, 24, 16, 0.6), rgba(44, 24, 16, 0.6)),
+        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
+    text-align: center;
     margin-top: 60px;
 }
 
-.hero-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .hero-conteudo h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
 .hero-conteudo p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 .btn {
     display: inline-block;
     padding: 12px 30px;
     background-color: burlywood;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+    color: #2c1810;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
     text-decoration: none;
 }
 
 .btn:hover {
     background-color: rgb(254, 207, 145);
+    transform: scale(1.05);
+}
+
+.sobre,
+.produtos,
+.localizacao {
+    padding: 5rem 2rem;
 }
 
 .sobre {
-    padding: 5rem 2rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
     text-align: center;
 }
 
-.sobre h2{
+.sobre h2,
+.produtos h2,
+.localizacao h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #2c1810;
 }
 
 .sobre p {
-    font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
-    color: #666666;
+    color: #555;
+    font-size: 1.1rem;
 }
 
 .produtos {
-    padding: 5rem 2rem;
-    background-color: #fff;
-}
-
-.produtos h2 {
-    font-size: 2.5rem;
+    background-color: #faf8f5;
     text-align: center;
-    margin-bottom: 3rem;
-    color: #2c1810;
 }
 
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .produto-card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.5s;
-    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .produto-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .produto-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
 }
 
 .preco {
-    font-weight: bold;
+    font-weight: 700;
     color: burlywood;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .localizacao {
-    padding: 5rem 2rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    text-align: center;
 }
 
-.localizacao h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2c1810;
-}
-
-.contato-info {
-    text-align: center;
-    margin-bottom: 2rem;
+.contato-info p {
+    margin-bottom: 0.4rem;
+    color: #444;
 }
 
 .mapa {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 2rem auto 0;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.mapa iframe {
-    display: block;
+footer {
+    background-color: #2c1810;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

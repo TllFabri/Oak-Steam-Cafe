@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oak & Steam Café – handcrafted coffee, local beans, and a warm experience.">
     <link rel="stylesheet" href="styles.css">
     <title>Oak & Steam Café ☕</title>
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main Navigation">
             <div class="logo">Oak & Steam Café</div>
-
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">About</a></li>
@@ -25,62 +24,61 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-conteudo">
-                <h1>Welcome to Oak & Café</h1>
+            <div class="hero-conteudo fade-in">
+                <h1>Welcome to Oak & Steam Café</h1>
                 <p>Discover the authentic taste of handcrafted coffee</p>
                 <a href="#produtos" class="btn">Discover our coffees</a>
             </div>
         </section>
 
-        <section id="#sobre" class="sobre">
-            <div class="container">
+        <section id="sobre" class="sobre">
+            <div class="container fade-in">
                 <h2>About us</h2>
-                <p>For over 10 years, Café Aroma has been bringing the finest handcrafted coffee experience. We select
-                    special beans from local producers and prepare each cup with dedication and passion.</p>
+                <p>For over 10 years, Oak & Steam Café has been bringing the finest handcrafted coffee experience.
+                    We select special beans from local producers and prepare each cup with dedication and passion.</p>
             </div>
         </section>
 
-        <section id="#produtos" class="produtos">
-            <div class="container">
+        <section id="produtos" class="produtos">
+            <div class="container fade-in">
                 <h2>Our Products</h2>
                 <div class="produtos-grid">
-
                     <article class="produto-card">
-                        <div class="produto-icon">☕</div>
+                        <div class="produto-icon" aria-hidden="true">☕</div>
                         <h3>Espresso</h3>
                         <p>Pure and intense coffee, brewed under perfect pressure.</p>
                         <span class="preco">R$ 8,00</span>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-icon">🥤</div>
+                        <div class="produto-icon" aria-hidden="true">🥤</div>
                         <h3>Cappuccino</h3>
-                        <p>Cremoso e suave, com espuma de leite perfeita</p>
+                        <p>Creamy and smooth, with perfect milk foam.</p>
                         <span class="preco">R$ 12,00</span>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-icon">🧊</div>
-                        <h3>Café Gelado</h3>
-                        <p>Refrescante e saboroso para dias quentes</p>
+                        <div class="produto-icon" aria-hidden="true">🧊</div>
+                        <h3>Iced Coffee</h3>
+                        <p>Refreshing and tasty for hot days.</p>
                         <span class="preco">R$ 10,00</span>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="#localizacao" class="localizacao">
-            <div class="container">
-                <h2>Onde estamos</h2>
+        <section id="localizacao" class="localizacao">
+            <div class="container fade-in">
+                <h2>Where we are</h2>
                 <div class="contato-info">
-                    <p>Rua do Café Gostoso, 123 - Centro, São Paulo - SP</p>
+                    <p>Tasty Coffee Street, 119 - Center, New Zealand</p>
                     <p>(11) 96712-5432</p>
-                    <p>contato@cafearoma.com.br</p>
+                    <p>contato@oaksteamcafe.com</p>
                 </div>
                 <div class="mapa">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58524.10939724264!2d-46.72716775136715!3d-23.541246700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce584764f24e21%3A0x16f0e07ac3d8d5bb!2sCaf%C3%A9%20Aroma%20Restaurante!5e0!3m2!1sen!2sbr!4v1760397945661!5m2!1sen!2sbr"
-                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!3m2!1spt-BR!2sbr!4v1760632187321!5m2!1spt-BR!2sbr!6m8!1m7!1sd16MaXvFnpTB97Hr2W70dA!2m2!1d-36.85087809526382!2d174.7645120378212!3f234.11945967522945!4f-5.528260532159422!5f0.7820865974627469"
+                        width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -88,10 +86,19 @@
     </main>
 
     <footer>
-        <p>2025 Café Aroma - Todos os direitos reservados</p>
+        <p>2025 Oak & Steam Café - All rights reserved</p>
     </footer>
 
-    <script async src="https://app.gptmaker.ai/widget/3E8AC052784BB2D3367ACE803BDA0EC1/float.js">
+    <script>
+        // animação de fade-in ao rolar
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.2 });
+
+        fadeEls.forEach(el => observer.observe(el));
     </script>
 </body>
 
