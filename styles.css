@@ -201,3 +201,101 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ESTILOS DO NOVO CARDÁPIO (Página Exclusiva) */
+.cardapio {
+    background-color: #fff; /* Fundo branco ou claro para contraste */
+    text-align: center;
+}
+
+.menu-categoria {
+    max-width: 900px;
+    margin: 3rem auto 2rem;
+    padding: 1.5rem; /* Aumentado o padding */
+    border: 1px solid #e0d9d0;
+    border-radius: 10px;
+    background-color: #faf8f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Adiciona uma sombra leve */
+}
+
+.menu-categoria h3 {
+    font-size: 1.8rem;
+    color: #2c1810;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid burlywood; /* Linha mais grossa */
+    display: inline-block;
+    padding-bottom: 8px; /* Aumentado o padding para a linha */
+}
+
+.cardapio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.2rem 0; /* Aumentado o padding vertical */
+    border-bottom: 1px dashed #c0a08d;
+}
+
+.cardapio-item:last-child {
+    border-bottom: none;
+}
+
+.nome-item {
+    font-weight: 600;
+    color: #2c1810;
+    font-size: 1.15rem; /* Fonte um pouco maior */
+    flex-basis: 30%;
+    text-align: left;
+}
+
+.descricao-item {
+    color: #555;
+    font-size: 1rem; /* Fonte um pouco maior */
+    flex-grow: 1;
+    margin: 0 1.5rem; /* Margem ajustada */
+    text-align: left;
+}
+
+.preco-item {
+    font-weight: 700;
+    color: burlywood;
+    font-size: 1.25rem; /* Fonte maior para o preço */
+    flex-basis: 15%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.aviso {
+    margin-top: 3rem;
+    font-style: italic;
+    color: #888;
+}
+
+/* Media Query para Responsividade do Cardápio */
+@media (max-width: 768px) {
+    .menu-categoria {
+        padding: 1rem;
+    }
+    .cardapio-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nome-item,
+    .descricao-item,
+    .preco-item {
+        flex-basis: 100%;
+        margin: 0.2rem 0;
+        text-align: center;
+    }
+
+    .nome-item {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .preco-item {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+}

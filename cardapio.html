@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardápio completo do Oak & Steam Café – cafés, doces e lanches especiais.">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="cafe.png">
+    <title>Cardápio Completo ☕ - Oak & Steam Café</title>
+
+    <style>
+        .cardapio-body {
+            /* Adicione padding extra no topo para compensar o header fixo, já que esta é uma página de conteúdo único */
+            padding-top: 100px; 
+        }
+        /* Ajuste para que a seção de cardápio ocupe o espaço corretamente na nova página */
+        #cardapio {
+            min-height: calc(100vh - 100px); /* Garante que preencha a tela */
+        }
+    </style>
+</head>
+
+<body class="cardapio-body">
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">Oak & Steam Café</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li> 
+                <li><a href="index.html#sobre">About</a></li>
+                <li><a href="#cardapio">Menu</a></li> 
+                <li><a href="index.html#produtos">Products</a></li>
+                <li><a href="index.html#localizacao">Locations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cardapio" class="cardapio">
+            <div class="container fade-in visible"> <h2>Our Full Menu</h2>
+
+                <div class="menu-categoria">
+                    <h3>☕ Handcrafted Coffees</h3>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Espresso</span>
+                        <span class="descricao-item">Pure and intense coffee, brewed under perfect pressure.</span>
+                        <span class="preco-item">R$ 8,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Americano</span>
+                        <span class="descricao-item">Diluted espresso, a lighter but equally flavorful option.</span>
+                        <span class="preco-item">R$ 9,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Latte</span>
+                        <span class="descricao-item">Creamy espresso with steamed milk, perfect balance.</span>
+                        <span class="preco-item">R$ 13,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Cappuccino</span>
+                        <span class="descricao-item">Espresso with steamed milk and perfect foam, dusted with cocoa.</span>
+                        <span class="preco-item">R$ 12,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Mocha</span>
+                        <span class="descricao-item">Latte with rich chocolate syrup.</span>
+                        <span class="preco-item">R$ 15,00</span>
+                    </div>
+                </div>
+
+                <div class="menu-categoria">
+                    <h3>🍰 Sweets and Pastries</h3>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Traditional Cheese Bread (Pão de Queijo)</span>
+                        <span class="descricao-item">Crispy on the outside, soft on the inside, the Brazilian classic.</span>
+                        <span class="preco-item">R$ 5,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Chocolate Cake Slice</span>
+                        <span class="descricao-item">Rich and moist chocolate cake with brigadeiro topping.</span>
+                        <span class="preco-item">R$ 15,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Croissant</span>
+                        <span class="descricao-item">Flaky French pastry, served plain or with chocolate filling.</span>
+                        <span class="preco-item">R$ 11,00</span>
+                    </div>
+                    <div class="cardapio-item">
+                        <span class="nome-item">Red Velvet Cake</span>
+                        <span class="descricao-item">Soft red cake with cream cheese frosting.</span>
+                        <span class="preco-item">R$ 17,00</span>
+                    </div>
+                </div>
+                
+                <p class="aviso">* Check for the daily special menu on site, including vegan and gluten-free options.</p>
+
+            </div>
+        </section>
+        </main>
+
+    <footer>
+        <p>2025 Oak & Steam Café - All rights reserved</p>
+    </footer>
+
+    <script async src="https://app.gptmaker.ai/widget/3E8AC052784BB2D3367ACE803BDA0EC1/float.js?name=OakAI"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.fade-in');
+        fadeEls.forEach(el => el.classList.add('visible')); // Garante que tudo seja visível imediatamente
+    </script>
+</body>
+
+</html>
